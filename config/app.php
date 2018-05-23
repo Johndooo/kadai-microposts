@@ -148,6 +148,8 @@ return [
         // Laravelcollectiveライブラリの使用
         Collective\Html\HtmlServiceProvider::class,
 
+        // Gravatarの使用
+        Thomaswelton\LaravelGravatar\LaravelGravatarServiceProvider::class,
     ],
 
     /*
@@ -199,6 +201,9 @@ return [
         // Laravelcollectiveライブラリの使用
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+
+        // Gravatarの使用
+        'Gravatar' => Thomaswelton\LaravelGravatar\Facades\Gravatar::class,
     ],
 
 ];
