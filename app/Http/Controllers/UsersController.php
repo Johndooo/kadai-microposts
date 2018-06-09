@@ -68,15 +68,16 @@ class UsersController extends Controller
     public function favorites($id)
     {
         $user = User::find($id);
-        $followings = $user->favorites()->paginate(10);
-        
+        $favorites = $user->favorites()->paginate(10);
+
         $data = [
             'user' => $user,
-            'users' => $favorites,
+            'microposts' => $favorites, // 'users' に代入しているのは「お気に入りのmicropost」データ
         ];
         
         $data += $this->counts($user);
         
         return view('users.favorites', $data);
     }
+
 }
